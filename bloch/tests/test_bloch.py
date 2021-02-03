@@ -6,7 +6,7 @@ import scipy.io as sio
 
 from bloch.bloch import bloch
 
-TEST_DIR = "test_data"
+TEST_DIR = "bloch/tests/data"
 
 class BlochTest(unittest.TestCase):
     """
@@ -67,9 +67,9 @@ class BlochTest(unittest.TestCase):
         mz_0 = 1
 
         mx, my, mz = bloch(b1, g, dt, t1, t2, df, dp, mode, mx_0, my_0, mz_0)
-        self.assertTrue(np.allclose(mx_a, mx));
-        self.assertTrue(np.allclose(my_b, my));
-        self.assertTrue(np.allclose(mz_c, mz));
+        self.assertTrue(np.allclose(mx_a, mx))
+        self.assertTrue(np.allclose(my_b, my))
+        self.assertTrue(np.allclose(mz_c, mz))
     
     def test_ssfptransiest(self):
         """

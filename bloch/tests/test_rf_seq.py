@@ -6,9 +6,9 @@ import scipy as sp
 from bloch.bloch import bloch
 from bloch.rf_seq import hard_pulses, sinc_pulse
 
-from BlochTest import get_data_with_key
+from bloch.tests.test_bloch import get_data_with_key
 
-TEST_DIR = "test_data"
+TEST_DIR = "bloch/tests/data"
 
 class RFSeqTests(unittest.TestCase):
     """
@@ -56,8 +56,6 @@ class RFSeqTests(unittest.TestCase):
         mx, my, mz = bloch(rf, g, dt, 100, 100, 0, dp, 0, mx0, my0, mz0)
         mxy = mx + 1.0j*my
         np.allclose(expected_mxy, mxy)
-
-
 
 if __name__ == "__main__":
     unittest.main()
