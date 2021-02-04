@@ -1,4 +1,4 @@
-# bloch-simulator-python
+# bloch-sim-py
 The original bloch equation simulator was a matlab mex file created by Brian Hargreaves at Stanford University. 
 This is a modification to run it as a python C extension.
 The simulator was used in a graduate MRI class taught by Miki Lustig. 
