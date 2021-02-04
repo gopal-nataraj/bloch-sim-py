@@ -1,25 +1,35 @@
-bloch-simulator-python
-======================
+# bloch-simulator-python
+The original bloch equation simulator was a matlab mex file created by Brian Hargreaves at Stanford University. 
+This is a modification to run it as a python C extension.
+The simulator was used in a graduate MRI class taught by Miki Lustig. 
+Lustig wrote several helper modules in matlab, which have also been converted to python here.
 
-The original bloch equation simulator was a Matlab mex file created by Brian Hargreaves at Stanford University. This is a modification to run it as a Python C extension
-We used the simulator in a graduate MRI class taught by Mikki Lustig; Lustig wrote several helper modules in matlab, which I've also converted to Python.
-This module current uses python3. I developed this on a Linux machine and others have told me it works on Mac. It is untested on Windows.
+This module was developed on a linux platform and has been since been tested on macos 10.14.6.
 
-Dependencies
-======================
-python 3.7
-numpy 1.16.4
-scipy 1.3.0
-matplotlib 3.1.0
+Minor edits by Gopal Nataraj
 
-These are the version of the libraries I have tested the sim on. I make no guarentee about other versions, but I am not using very complicated calls, so there should be some flexibility. 
+## Dependencies
+`python 3.7`<br>
+`numpy 1.16.4`<br>
+`scipy 1.3.0`<br>
+`matplotlib 3.1.0`<br>
 
-Installation
-======================
-Simply run "python setup.py install" to install the simulator. Then "from bloch import bloch" for the primary bloch simulator function. Numpy needs to be installed for the setup file to run. As this is a compiled c extension, you will need to make sure your build environment can build python c extensions.
+Other versions have not been tested, but there should be some flexibility.
 
-License
-======================
-This library is distributed under the same terms as Brian's original bloch simulator
+## Installation
+First, make sure your build environment can build python c extensions. [Here](http://notesbyanerd.com/2018/11/02/pip-install-cant-find-numpy-header/) are some instructions that may help on macs. 
 
-Thank you to Brian for the original bloch simulator, Mikki Lustig for the code for the helper modules, and NPann for assisting me with a critical bug fix.
+Next, run `pip install -e .` from the base directory.
+
+Use `from bloch import bloch` for the primary bloch simulator function. 
+
+## Testing
+Run `python -m unittest` from the base directory.
+
+## License
+This library is distributed under the same terms as Brian's original bloch simulator.
+
+## Acknowledgments
+Thanks to Brian for the original bloch simulator, 
+Miki for the helper modules, 
+and NPann for assisting with a critical bug fix.
